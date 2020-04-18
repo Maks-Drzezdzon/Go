@@ -31,6 +31,14 @@ var (
 	// cant use := in global variable scopes
 )
 
+const (
+	baseID = iota
+	id     = iota
+)
+const (
+	newIota = iota
+)
+
 func main() {
 	/* This is my first sample program. */
 	hello(name)
@@ -54,6 +62,25 @@ func main() {
 
 	lastName := "D"
 	fmt.Println(lastName)
+	// iota will inc every time you ref it again, it resets between constant blocks
+	// so newIota will reset back to 0 and not 2 because its in a new const block
+	fmt.Println(baseID, id, newIota)
+
+	array := [3]int{1, 2, 3}
+	fmt.Println(array)
+
+	// slices are based ontop of arrays
+	// any changes made to the arrya or slices will reflect in the other
+	// think of slices like references / pointers to arrays
+	slice := array[:]
+	fmt.Println(slice)
+	// slices are not fixed size unlike arrays
+	sliceTwo := []int{1, 2, 3}
+	fmt.Println(sliceTwo)
+	sliceTwo = append(sliceTwo, 4)
+	fmt.Println(sliceTwo)
+	// slices have the same func as python with slice[start:stop]
+	fmt.Println(sliceTwo[:2])
 
 }
 
