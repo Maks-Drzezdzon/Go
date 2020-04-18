@@ -1,4 +1,4 @@
-package LeetCode
+package main
 
 import (
 	"fmt"
@@ -34,10 +34,26 @@ var (
 func main() {
 	/* This is my first sample program. */
 	hello(name)
-	//TestHello()
+	// TestHello()
 	// for types use %T and %v for value
 	age := 24
 	fmt.Printf("%v is now a %T and was an %T", age, float32(age), age)
+
+	for i := 0; i <= 10; i++ {
+		fmt.Println(i)
+	}
+
+	// go also has pointers
+	// pointers are declared by the data type *string *int
+	// they have to me init with what type they will be so string
+	var firstName *string = new(string)
+	// now this can be assigned a val
+	*firstName = "Maks"
+	// you need  to ref the pointer again ofc with * to get the data not the address
+	fmt.Println(*firstName)
+
+	lastName := "D"
+	fmt.Println(lastName)
 
 }
 
