@@ -82,6 +82,22 @@ func main() {
 	// slices have the same func as python with slice[start:stop]
 	fmt.Println(sliceTwo[:2])
 
+	// maps
+	m := map[string]int{"age": 42}
+	fmt.Println(m["age"])
+	// will give mem location
+	fmt.Println(m)
+
+	type user struct {
+		ID        int
+		FirstName string
+		LastName  string
+	}
+	var u user
+	u.ID = 1
+	u.LastName = "d"
+	u.FirstName = "maks"
+	fmt.Print(u)
 }
 
 func hello(data string) string {
