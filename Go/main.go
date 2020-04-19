@@ -1,14 +1,12 @@
 package main
 
 import (
-	"errors"
-	"fmt"
+	"net/http"
 
-	"github.com/pluralsight/webservice/Go/models"
+	"github.com/pluralsight/webservice/Go/controllers"
 )
 
-func main() error {
-	u := models.User{ID: 2, FirstName: "m", LastName: "d"}
-	fmt.Println(u)
-	return errors.New("failed to run main")
+func main() {
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
 }
