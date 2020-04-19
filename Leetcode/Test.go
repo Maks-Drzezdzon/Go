@@ -50,6 +50,23 @@ func main() {
 	structExample()
 
 	loops()
+
+	switches()
+}
+
+type HTTPRequest struct {
+	Method string
+}
+
+func switches() {
+	r := HTTPRequest{Method: "GET"}
+
+	switch r.Method {
+	case "GET":
+		println("get data")
+	case "DELETE":
+		print("del data")
+	}
 }
 
 func loops() {
