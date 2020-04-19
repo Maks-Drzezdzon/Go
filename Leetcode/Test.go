@@ -40,17 +40,54 @@ const (
 )
 
 func main() {
-	/* This is my first sample program. */
-	hello(name)
-	// TestHello()
 	// for types use %T and %v for value
 	age := 24
 	fmt.Printf("%v is now a %T and was an %T", age, float32(age), age)
 
-	for i := 0; i <= 10; i++ {
+	data()
+
+	structExample()
+
+	loops()
+}
+
+func loops() {
+	for i := 0; i < 5; i++ {
 		fmt.Println(i)
 	}
 
+	var a int
+
+	for {
+		// inf loop
+		if a == 5 {
+			break
+		}
+		fmt.Println(a)
+		a++
+	}
+
+	slice := []int{1, 2, 3}
+	for _, v := range slice {
+		print(v)
+
+	}
+}
+
+func structExample() {
+	type user struct {
+		ID        int
+		FirstName string
+		LastName  string
+	}
+	var u user
+	u.ID = 1
+	u.LastName = "d"
+	u.FirstName = "maks"
+	fmt.Print(u)
+}
+
+func data() {
 	// go also has pointers
 	// pointers are declared by the data type *string *int
 	// they have to me init with what type they will be so string
@@ -87,19 +124,4 @@ func main() {
 	fmt.Println(m["age"])
 	// will give mem location
 	fmt.Println(m)
-
-	type user struct {
-		ID        int
-		FirstName string
-		LastName  string
-	}
-	var u user
-	u.ID = 1
-	u.LastName = "d"
-	u.FirstName = "maks"
-	fmt.Print(u)
-}
-
-func hello(data string) string {
-	return data
 }
