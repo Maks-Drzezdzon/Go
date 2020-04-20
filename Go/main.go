@@ -1,3 +1,7 @@
+// Licence space
+
+//  what is this package doing
+
 package main
 
 import (
@@ -18,6 +22,8 @@ func main() {
 	// when you use init in go all import variables will be instantiated first
 	// however you dont have controll over what order they will be init
 	// then any init in your main will be instantiated after
+	// only called during package initialization
+	// cant be called
 	controllers.RegisterControllers()
 	http.ListenAndServe(":3000", nil)
 }
