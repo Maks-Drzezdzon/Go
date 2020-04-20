@@ -4,6 +4,11 @@
 
 package main
 
+// when creating a package provide a solution to a problem
+// focus on the consumer of the package - simple to use - minimize api - encapsulate changes/abstract output while changing internals
+// maximize reusability reduce dependencies
+
+// avoid panics and provide error handling
 import (
 	"net/http"
 
