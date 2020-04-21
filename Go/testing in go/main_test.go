@@ -4,6 +4,7 @@ import (
 	"testing"
 )
 
+// every test has to start with Test
 func TestAddition(t *testing.T) {
 	got := 2 + 2
 	expected := 4
