@@ -11,8 +11,14 @@ package main
 // avoid panics and provide error handling
 import (
 	"net/http"
-
+	// you can use vendored imports that import a library
+	// much like this one below
 	"github.com/pluralsight/webservice/Go/controllers"
+	// however you can make a folder called vendor
+	// with a folder structure relative to the import above
+	// and paste all the required info there
+	// and everything will work as it did before
+	// meanwhile letting you edit or have multiple versions of the same library
 )
 
 func main() {
