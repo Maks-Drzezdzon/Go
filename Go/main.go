@@ -37,4 +37,12 @@ func main() {
 	// cant be called
 	controllers.RegisterControllers()
 	http.ListenAndServe(":3000", nil)
+	rfunc(2, 3)
+}
+
+func rfunc(data, moreData int) {
+	data = 1
+	moreData = 2
+	// will return named variables at the end of func
+	return
 }
