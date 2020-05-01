@@ -1,0 +1,47 @@
+# does one thing
+# break up into groups that look after 1 thing
+# SOA service oriented architecture
+
+# domain driven design in micro
+# user domain
+# order domain
+# product domain
+# each has a db
+# sharing db is an anit pattern in micro services
+
+# RPC Request/reply Remote Procedure invocation
+
+# look up authentication, tokens, cookies
+# histrix, ribbon
+# monitoring - Health checking/Heart bits
+# load balancing
+
+# microservices should be isolated from each other
+# package each microservice as a container
+# docker, rkt
+# K8s, swarm
+
+### Go CMD ### go help 'name of thing you want to look up'
+# go run
+# doesnt leave artefacts on disk
+#
+
+# go build
+# compiles and creates an exe in your workspace
+#
+
+# go install
+# installs everything in your folder
+#
+
+# build flags
+# -o 'location'
+# -i / installs all depend, creates a pkg folder
+# -a force recompile pkgs to rebuild that are already upto date
+#
+
+# build modes
+# building shared libraries
+# help buildmode
+# buildmode=c-archive to link file to c
+# vetting source code
