@@ -1,0 +1,27 @@
+# this is just a file to document any Go related info i find, this is not an actual yaml file
+
+#################
+# Testing in GO #
+#################
+#
+# testing libraries #
+# testing           #
+# testing/quick     #
+# testing/iotest    #
+# net/http/httptest #
+#
+# OOS Test libraires github.com/
+# Testify
+# Ginkgo
+# GoConvey
+# httpexpect
+# gomock
+# go-sqlmock
+#
+# go comes with all testing tools you need, you can augment it with OOS libraries if you'd like
+# has Unit, Integration and end to end testing
+# for end to end testing use net/http/httptest
+# benchmark performance tests
+# for example tests are documented in the go docs
+
+# OEF

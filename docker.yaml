@@ -1,0 +1,13 @@
+# docker run image-name
+# docker ps / running
+# docker ps -a / were running
+
+# swarm use --advertise-addr 123.123.123.123:8377
+# to get the ip
+# --listen-addr 123.123.123.123:8377
+# you get a token command to make something join a swarm as a manager or worker
+#
+
+# cascading failure, a failure cascades to its dependencies
+# subject to amplification many failures that retry x5 times can amp load
+# which could crash a system
